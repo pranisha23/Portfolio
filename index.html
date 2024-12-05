@@ -78,11 +78,13 @@
         <p>
           I am a motivated and aspiring frontend developer with a strong
           enthusiasm for creating visually stunning and user-centric web
-          applications. While I am at the beginning of my professional career, I
-          am eager to tackle new challenges and collaborate on projects that
-          make a meaningful impact. Beyond coding, I enjoy exploring new design
-          trends, refining my skills, and staying updated with the latest
-          advancements in frontend development.
+          applications. My journey into web development stems from a deep
+          interest in how technology shapes our daily interactions, driving me
+          to continuously learn and grow. While I am at the beginning of my
+          professional career, I am eager to tackle new challenges and
+          collaborate on projects that make a meaningful impact. Beyond coding,
+          I enjoy exploring new design trends, refining my skills, and staying
+          updated with the latest advancements in frontend development.
         </p>
         <button class="btn">Download CV</button>
       </div>
@@ -183,5 +185,14 @@
         </div>
       </div>
     </section>
+
+    <script>
+      const menuIcon = document.getElementById('menu-icon')
+      const navList = document.querySelector('.navlist')
+
+      menuIcon.addEventListener('click', () => {
+        navList.classList.toggle('active')
+      })
+    </script>
   </body>
 </html>
