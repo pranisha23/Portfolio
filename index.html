@@ -86,7 +86,9 @@
           I enjoy exploring new design trends, refining my skills, and staying
           updated with the latest advancements in frontend development.
         </p>
-        <button class="btn">Download CV</button>
+        <div class="btn">
+          <a href="./images/CV.pdf" download="">Download CV</a>
+        </div>
       </div>
     </section>
 
@@ -96,16 +98,31 @@
         <h2>Skills</h2>
       </div>
       <div class="skills-icon">
-        <img width="60px" height="60px" src="images/react.png" alt="react" />
-        <img
-          width="60px"
-          height="60px"
-          src="images/tailwind.png"
-          alt="tailwind"
-        />
-        <img width="60px" height="60px" src="images/js.png" alt="js" />
-        <img width="60px" height="60px" src="images/html-5.png" alt="html" />
-        <img width="60px" height="60px" src="images/css-3.png" alt="css" />
+        <div class="skill-item">
+          <img width="60px" height="60px" src="images/react.png" alt="react" />
+          <div class="skill-text">React</div>
+        </div>
+        <div class="skill-item">
+          <img
+            width="60px"
+            height="60px"
+            src="images/tailwind.png"
+            alt="tailwind"
+          />
+          <div class="skill-text">Tailwind css</div>
+        </div>
+        <div class="skill-item">
+          <img width="60px" height="60px" src="images/js.png" alt="js" />
+          <div class="skill-text">Javascript</div>
+        </div>
+        <div class="skill-item">
+          <img width="60px" height="60px" src="images/html-5.png" alt="html" />
+          <div class="skill-text">HTML</div>
+        </div>
+        <div class="skill-item">
+          <img width="60px" height="60px" src="images/css-3.png" alt="css" />
+          <div class="skill-text">CSS</div>
+        </div>
       </div>
     </section>
 
@@ -176,23 +193,14 @@
               <input class="bg" type="text" placeholder="Full Name" />
               <input class="bg" type="email" placeholder="Email" />
               <textarea
-                class="bg height"
+                class="bg"
                 placeholder="Type your message here..."
               ></textarea>
             </div>
-            <button class="btn">Submit</button>
+            <button class="btn">SUBMIT</button>
           </div>
         </div>
       </div>
     </section>
-
-    <script>
-      const menuIcon = document.getElementById('menu-icon')
-      const navList = document.querySelector('.navlist')
-
-      menuIcon.addEventListener('click', () => {
-        navList.classList.toggle('active')
-      })
-    </script>
   </body>
 </html>

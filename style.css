@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:wght@300;400;500;600&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -23,6 +24,7 @@
 body {
   background-color: var(--bg-color);
   color: var(--text-color);
+  overflow-x: hidden;
 }
 
 /* Home section */
@@ -36,8 +38,8 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: transparent;
-  padding: 22px 10%;
+  background: var(--bg-color);
+  padding: 0px 5%;
 }
 
 span {
@@ -61,10 +63,26 @@ span {
 }
 
 .navlist a.active {
-  color: aqua;
-  border: 2px solid aqua;
+  color: rgb(1, 202, 202);
+  background: linear-gradient(45deg, #00c6ff, #0072ff);
+  background-clip: text;
+  border: 2px solid transparent;
   border-radius: 5px;
   padding: 5px;
+  position: relative;
+  box-shadow: 0 0 10px rgba(0, 200, 255, 0.6), 0 0 20px rgba(1, 115, 255, 0.6);
+}
+
+.navlist a.active::before {
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  background: linear-gradient(45deg, #00c6ff, #0072ff);
+  z-index: -1;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 198, 255, 0.8), 0 0 30px rgba(0, 114, 255, 0.8);
 }
 
 #menu-icon {
@@ -164,6 +182,10 @@ section {
   border: none;
 }
 
+.btn a {
+  color: var(--text-color);
+}
+
 /* Skills */
 .skills {
   padding-top: 100px;
@@ -179,21 +201,44 @@ section {
 }
 
 .skills-icon {
-  padding-top: 35px;
   display: flex;
-  gap: 10rem;
-  margin-left: 300px;
-  margin-top: 20px;
-  margin-bottom: 50px;
+  gap: 4rem;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-.skills-icon img {
+.skill-item {
+  position: relative;
+  display: inline-block;
+}
+
+.skill-item img {
+  margin-top: 35px;
   transition: transform 0.3s ease;
 }
 
-.skills-icon img:hover {
-  transform: scale(1.5);
-  cursor: pointer;
+.skill-item:hover img {
+  transform: scale(1.2);
+}
+
+.skill-text {
+  position: absolute;
+  top: 170%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.skill-item:hover .skill-text {
+  opacity: 1;
 }
 
 /* Projects */
@@ -243,7 +288,7 @@ section {
 }
 
 .layer h5 {
-  margin-top: 2px;
+  margin-top: 50px;
   font: 20px;
   font-weight: 600;
   margin-bottom: 15px;
@@ -289,12 +334,14 @@ section {
 }
 
 .contact-two {
+  margin-top: 20px;
   padding-top: 30px;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 20rem;
-  padding-bottom: 75px;
+  gap: 8rem;
+  padding-bottom: 40px;
+  margin-left: 140px;
 }
 
 .contact-text {
@@ -306,11 +353,15 @@ section {
   padding-top: 15px;
 }
 
+.input-field {
+  margin-top: 20px;
+}
+
 .input {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  padding-top: 20px;
+  gap: 10px;
+  padding-top: 10px 200px;
 }
 
 .bg {
@@ -318,26 +369,33 @@ section {
   background-color: #454545;
   height: 30px;
   width: 20rem;
-  border-radius: 2px;
+  border-radius: 4px;
+  width: 500px;
+}
+
+.contact input {
+  height: 2.8rem;
 }
 
 .bg::placeholder {
-  color: #fff;
+  color: rgb(160, 159, 159);
   padding: 10px;
 }
 
-.height {
-  height: 70px;
-  overflow: hidden;
+.contact textarea {
+  resize: none;
+  height: 130px;
 }
 
 .input-field .btn {
-  margin-top: 10px;
+  font-size: 14px;
+  margin-top: 15px;
+  padding: 9px 24px;
 }
 
-@media (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
   header {
-    padding: 20px 5%;
+    padding: 0px 5%;
   }
 
   .navlist a {
@@ -374,6 +432,8 @@ section {
   .contact-two {
     flex-direction: column;
     gap: 2rem;
+    margin-top: 0;
+    margin-left: 0;
   }
 
   .contact-text {
@@ -381,15 +441,16 @@ section {
   }
 
   .input-field {
-    padding-left: 18rem;
+    align-items: center;
+    padding-left: 16.5rem;
   }
 
   .input-field .btn {
-    margin-left: 7.5rem;
+    margin-left: 12.7rem;
   }
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   header {
     flex-wrap: wrap;
     justify-content: space-between;
@@ -400,7 +461,7 @@ section {
     flex-direction: column;
     position: absolute;
     gap: 4px;
-    top: 70%;
+    top: 60%;
     left: 0;
     width: 100%;
     background: var(--bg-color);
@@ -464,6 +525,7 @@ section {
   }
 
   .layer h5 {
+    margin-top: 8px;
     font: 10px;
     margin-bottom: 5px;
   }
@@ -487,20 +549,32 @@ section {
   }
 
   .input {
-    width: 90%;
-    padding-right: 13rem;
+    width: 85%;
+    padding-right: 12.5rem;
+    padding-left: 3.5rem;
+    padding-top: 0;
   }
 
   .input-field .btn {
-    margin-right: 24rem;
+    margin-right: 28.5rem;
+    margin-top: 15px;
   }
 
   .bg {
     width: 100%;
   }
+
+  .contact-text {
+    line-height: 2;
+  }
+
+  .contact-two {
+    margin-top: 0;
+    margin-left: 0;
+  }
 }
 
-@media (max-width: 480px) {
+@media screen and (max-width: 480px) {
   .home {
     padding-top: 0px;
     font-size: 0.9rem;
