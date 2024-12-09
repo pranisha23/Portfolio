@@ -63,7 +63,7 @@ span {
 }
 
 .navlist a.active {
-  color: rgb(1, 202, 202);
+  color: transparent;
   background: linear-gradient(45deg, #00c6ff, #0072ff);
   background-clip: text;
   border: 2px solid transparent;
@@ -341,7 +341,7 @@ section {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 8rem;
+  gap: 7rem;
   padding-bottom: 40px;
   margin-left: 140px;
 }
@@ -370,9 +370,8 @@ section {
   border: none;
   background-color: #454545;
   height: 30px;
-  width: 20rem;
   border-radius: 4px;
-  width: 500px;
+  width: 450px;
 }
 
 .contact input {
@@ -392,7 +391,7 @@ section {
 .input-field .btn {
   font-size: 14px;
   margin-top: 15px;
-  padding: 9px 24px;
+  padding: 9px 197px;
 }
 
 @media screen and (max-width: 1024px) {
@@ -444,11 +443,7 @@ section {
 
   .input-field {
     align-items: center;
-    padding-left: 16.5rem;
-  }
-
-  .input-field .btn {
-    margin-left: 12.7rem;
+    padding-left: 15rem;
   }
 }
 
@@ -460,35 +455,10 @@ section {
 
   .navlist {
     display: none;
-    flex-direction: column;
-    position: absolute;
-    gap: 4px;
-    top: 60%;
-    left: 0;
-    width: 100%;
-    background: var(--bg-color);
-    z-index: 999;
-    text-align: center;
-    padding-bottom: 10px;
-  }
-
-  .navlist a {
-    font-size: 18px;
-    margin: 10px 0;
-    text-align: center;
-  }
-
-  .navlist a.active {
-    color: var(--second-color);
-    border: none;
   }
 
   #menu-icon {
     display: block;
-  }
-
-  .navlist.active {
-    display: flex;
   }
 
   .home {
@@ -549,31 +519,29 @@ section {
     flex-direction: column;
     gap: 2rem;
     align-items: center;
-  }
-
-  .input {
-    width: 85%;
-    padding-right: 12.5rem;
-    padding-left: 3.5rem;
-    padding-top: 0;
-  }
-
-  .input-field .btn {
-    margin-right: 28.5rem;
-    margin-top: 15px;
-  }
-
-  .bg {
-    width: 100%;
+    margin-top: 0;
+    margin-left: 0;
   }
 
   .contact-text {
     line-height: 2;
   }
 
-  .contact-two {
-    margin-top: 0;
-    margin-left: 0;
+  .input {
+    width: 85%;
+    padding-right: 9.5rem;
+    padding-left: 1.5rem;
+    padding-top: 0;
+  }
+
+  .bg {
+    width: 100%;
+  }
+
+  .input-field .btn {
+    margin-right: 16rem;
+    margin-left: 1.5rem;
+    margin-top: 15px;
   }
 }
 
