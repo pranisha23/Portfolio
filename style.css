@@ -205,6 +205,8 @@ section {
   gap: 4rem;
   justify-content: center;
   flex-wrap: wrap;
+  cursor: pointer;
+  margin-bottom: 18px;
 }
 
 .skill-item {
@@ -354,7 +356,7 @@ section {
 }
 
 .input-field {
-  margin-top: 20px;
+  margin-top: 14px;
 }
 
 .input {
@@ -516,8 +518,9 @@ section {
   }
 
   .skills-icon {
-    gap: 2rem;
+    gap: 2.5rem;
     flex-wrap: wrap;
+    margin-bottom: 24px;
   }
 
   .projects-content {
